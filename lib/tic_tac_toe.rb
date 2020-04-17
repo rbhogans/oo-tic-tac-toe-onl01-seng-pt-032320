@@ -1,4 +1,4 @@
-  
+require 'pry'  
 class TicTacToe
 
   WIN_COMBINATIONS = [
@@ -43,7 +43,7 @@ end
 
 def turn_count
   turn = 0
-b  @oard.each do |index|
+  @board.each do |index|
     if index == "X" || index == "O"
       turn += 1
     end
@@ -74,7 +74,7 @@ def turn
     turn
   end
 end
-end
+
 
 def valid_move?(index)
   index.between?(0,8) && !position_taken?(index)
@@ -117,17 +117,21 @@ end
    # return the winning combination indexes as an array if there is a win.
   # use your WIN_COMBINATIONS constant in this method.
 def won?
- if @board[combo[0]] == ("X")@board[combo[1]] == ("X")@board[combo[2]]==("X"@board[combo[3]] == ("X")@board[combo[4]] == ("X")@board[combo[5]]
-    @board[combo[6]] == ("X")@board[combo[7]] == ("X")@board[combo[8]]== ("X") ||
-   
-  @board[combo[0]]@board[combo[1]]@board[combo[2]]                            @board[combo[3]]@board[combo[4]]@board[combo[5]]
-    @board[combo[6]]@board[combo[7]]@board[combo[8]] ==("O") true 
-    
-  else 
-    false
-   end
-   end
-   [index] WIN_COMBINATIONS.each do |[combo[0] == "X" && combo[1] == "X" && combo[2] == "X" || combo[0] == "O" && combo[1] == "O" && combo[2] == "O"
-== ("X") || ("O"}
-   
+ WIN_COMBINATIONS.each do |combo|
+ if @board[combo[0]] == ("X") && 
+   @board[combo[1]] == ("X") && 
+   @board[combo[2]] == ("X") || 
+   @board[combo[0]] == ("O") && 
+   @board[combo[1]] == ("O") && 
+   @board[combo[2]] == ("O")
+   return combo
   end
+ end
+    false
+    end
+    
+def full?
+  @board.none? {|box| box==" "}
+end
+
+end
