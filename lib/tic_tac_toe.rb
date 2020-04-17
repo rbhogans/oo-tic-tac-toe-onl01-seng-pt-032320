@@ -116,11 +116,18 @@ end
    # return false/nil if there is no win combination present in the board 
    # return the winning combination indexes as an array if there is a win.
   # use your WIN_COMBINATIONS constant in this method.
+def won?
+ if @board[combo[0]] == ("X")@board[combo[1]] == ("X")@board[combo[2]]==("X"@board[combo[3]] == ("X")@board[combo[4]] == ("X")@board[combo[5]]
+    @board[combo[6]] == ("X")@board[combo[7]] == ("X")@board[combo[8]]== ("X") ||
    
-  def won?
-   @oard.each do |index|
-    if  WIN_COMBINATIONS == (" ") 
-      false
-    else
+  @board[combo[0]]@board[combo[1]]@board[combo[2]]                            @board[combo[3]]@board[combo[4]]@board[combo[5]]
+    @board[combo[6]]@board[combo[7]]@board[combo[8]] ==("O") true 
     
-end
+  else 
+    false
+   end
+   end
+   [index] WIN_COMBINATIONS.each do |[combo[0] == "X" && combo[1] == "X" && combo[2] == "X" || combo[0] == "O" && combo[1] == "O" && combo[2] == "O"
+== ("X") || ("O"}
+   
+  end
