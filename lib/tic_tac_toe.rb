@@ -135,11 +135,11 @@ def full?
 end
 
 def draw?
- if @board == full?? && !won?
- elsif
- won?== nil
- else
- &&   if @board ==  !won?
- else
+ full? && !won? ? true : false
 end
 end
+
+def over?
+  full?||!won?
+ end
+
