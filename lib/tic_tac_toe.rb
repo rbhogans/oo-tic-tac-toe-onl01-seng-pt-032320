@@ -134,4 +134,12 @@ def full?
   @board.none? {|box| box==" "}
 end
 
+def draw?
+ if @board == full?? && !won?
+ elsif
+ won?== nil
+ else
+ &&   if @board ==  !won?
+ else
+end
 end
