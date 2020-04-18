@@ -75,44 +75,6 @@ def turn
   end
 end
 
-
-def valid_move?(index)
-  index.between?(0,8) && !position_taken?(index)
-end
-
-def turn_count
-  turn = 0
-  @board.each do |index|
-    if index == "X" || index == "O"
-      turn += 1
-    end
-  end
-  return turn
-end
-
-def current_player
-  #if the turn count is an even number, that means O just went, so the next/current player is X
-  num_turns = turn_count
-  if num_turns % 2 == 0
-    player = "X"
-  else
-    player = "O"
-  end
-  return player
-end
-
-def turn
-  puts "Please choose a number 1-9:"
-  user_input = gets.chomp
-  index = input_to_index(user_input)
-  if valid_move?(index)
-    player_token = current_player
-    move(index, player_token)
-    display_board
-  else
-    turn
-  end
-end
    # return false/nil if there is no win combination present in the board 
    # return the winning combination indexes as an array if there is a win.
   # use your WIN_COMBINATIONS constant in this method.
@@ -140,5 +102,23 @@ end
 end
 
 def over?
-  draw? || won?
+ draw? || won?
 end
+
+def winner
+  
+    @board.each do |index|
+    if index == "X" || index == "O"
+  end
+  
+  def play
+    until the game is over
+  take turns
+end
+ 
+if the game was won
+  congratulate the winner
+else if the game was a draw
+  tell the players it ended in a draw
+end
+  end
