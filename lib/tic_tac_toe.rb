@@ -140,6 +140,5 @@ end
 end
 
 def over?
-  full?||!won?
- end
-
+  draw? || won?
+end
