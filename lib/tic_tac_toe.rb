@@ -114,10 +114,10 @@ def winner
       return "winner"
   end
   
-    def play
-    until @board == over
+    def play(board)
+    until over? (board) 
     the game is over
-  take turns
+  turn(board)
 end
  
 if the game was won
