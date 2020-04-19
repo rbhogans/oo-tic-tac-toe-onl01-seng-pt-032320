@@ -115,7 +115,8 @@ def winner
   end
   
     def play
-    until the game is over
+    until @board == over
+    the game is over
   take turns
 end
  
