@@ -106,12 +106,15 @@ def over?
 end
 
 def winner
-  
-    @board.each do |index|
-    if index == "X" || index == "O"
+@board.each do |index|
+    if index == "X"
+      return "winner"
+    else
+      index == "O"
+      return "winner"
   end
   
-  def play
+    def play
     until the game is over
   take turns
 end
@@ -121,4 +124,3 @@ if the game was won
 else if the game was a draw
   tell the players it ended in a draw
 end
-  end
